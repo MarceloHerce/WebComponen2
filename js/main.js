@@ -14,16 +14,26 @@ const container = document.querySelector(".container");
 
 let names = ["Pablo","Juanbe","Jurado","Marcelo","Joaquin","Miguel"];
 let categories = ["women","men","lego"];
-for(let i = 0; i<6; i++){
-    let idP = parseInt(Math.floor(Math.random()*6));
-    let idN = parseInt(Math.floor(Math.random()*6));
-    const prop = {categoria:categories[parseInt(Math.floor(Math.random()*categories.length))], id:idP,nombre:names[idN]};
-    console.log(idP);
-    container.innerHTML += (generateProp(prop));
-}
 const img = document.querySelectorAll(".avatar");
 img.forEach(el => el.addEventListener('click', function(){
     el.classList.toggle("disabled");
 }))
 
+
+const mas = document.querySelector("#masculino");
+const fem = document.querySelector("#femenino");
+const reset = document.querySelector("#reset");
+mas.addEventListener('click' , () => {
+    let idP = parseInt(Math.floor(Math.random()*6));
+    let idN = parseInt(Math.floor(Math.random()*6));
+    container.innerHTML += generateProp({categoria:"men", id:idP,nombre:names[idN]});
+})
+fem.addEventListener('click' , () => {
+    let idP = parseInt(Math.floor(Math.random()*6));
+    let idN = parseInt(Math.floor(Math.random()*6));
+    container.innerHTML += generateProp({categoria:"women", id:idP,nombre:names[idN]});
+})
+reset.addEventListener('click' , () => {
+    container.innerHTML ="";
+})
 
