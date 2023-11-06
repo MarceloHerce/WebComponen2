@@ -1,0 +1,39 @@
+.containerBtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+picture{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+    justify-content: center;
+    align-items:center;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+}
+picture:hover{
+    box-shadow: 10px 10px lightblue;
+}
+img{
+    width: 60%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+.disabled{
+    opacity: 0.3;
+}
